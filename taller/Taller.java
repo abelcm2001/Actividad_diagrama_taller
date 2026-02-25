@@ -96,3 +96,7 @@ class Taller {
         m.reparar(r);
     }
 }
+
+class Factura {
+
+}
