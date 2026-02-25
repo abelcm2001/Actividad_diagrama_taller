@@ -1,0 +1,30 @@
+@startuml
+
+interface Especialista {
+    +reparar(Reparacion)
+}
+
+abstract class Vehiculo {
+    -matricula : String
+    -modelo : String
+}
+
+class Coche
+class Moto
+class Cliente
+class Mecanico
+class Reparacion
+class Taller
+class Factura
+
+Vehiculo <|-- Coche
+Vehiculo <|-- Moto
+
+Mecanico ..|> Especialista
+
+Vehiculo "1" *-- "0..*" Reparacion
+
+Taller --> Mecanico
+Taller --> Reparacion
+
+@enduml
